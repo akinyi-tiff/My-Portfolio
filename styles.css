@@ -1,0 +1,122 @@
+/* GENERAL */
+body {
+    font-family: Arial;
+    margin: 0;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+/* NAVBAR FLEXBOX */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* FLEXBOX PROJECTS */
+.projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* FLEXBOX SERVICES */
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+
+    animation: fadeIn 1s ease-in;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+    /* IMAGE SIZING */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Heading */
+.welcome {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* BUTTON ANIMATION */
+input[type="submit"] {
+
+/* BUTTON ANIMATION */
+input[type="submit"] {
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    background: darkblue;
+}
+/*paragraph*/
+p {
+    width: 70%;
+    margin: auto;
+    line-height: 1.6;
+}
+/*lists */
+ul {
+    list-style-position: inside;
+}
+/*footer*/
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
