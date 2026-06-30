@@ -1,131 +1,188 @@
-/* GENERAL */
-body {
-    font-family: Arial;
+/* ===========================
+   GENERAL STYLING
+========================== */
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     text-align: center;
+    line-height: 1.6;
 }
 
-/* HEADER */
+/* ===========================
+   HEADER
+=========================== */
+
 header {
-    background: #333;
+    background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 20px;
 }
 
-/* NAVBAR FLEXBOX */
+header h1 {
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-}
-
-/* FLEXBOX PROJECTS */
-.projects {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* FLEXBOX SERVICES */
-.services {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 250px;
-    background: #f4f4f4;
-    padding: 15px;
-    border-radius: 10px;
-
-    animation: fadeIn 1s ease-in;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+nav a:hover {
+    color: #00bfff;
 }
 
-    /* IMAGE SIZING */
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-/* Profile Image */
-.profile-img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-
-/* ANIMATION */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Welcome Heading */
-.welcome {
-    animation: fadeIn 2s ease-in-out;
-}
-
-
-/* BUTTON ANIMATION */
-input[type="submit"] {
-    padding: 10px;
-    background: blue;
-    color: white;
-    border: none;
-    transition: 0.3s;
-}
-
-input[type="submit"]:hover {
-    transform: scale(1.1);
-    background: darkblue;
-}
-/*paragraph*/
-p {
-    width: 70%;
-    margin: auto;
-    line-height: 1.6;
-}
-/*lists */
-ul {
-    list-style-position: inside;
-}
+/* For pages that use a list navigation */
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 nav li {
     display: inline;
 }
 
-/* CONTACT PAGE */
+/* ===========================
+   HEADINGS
+=========================== */
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   PARAGRAPHS
+=========================== */
+
+p {
+    width: 75%;
+    margin: 15px auto;
+}
+
+/* ===========================
+   LISTS
+=========================== */
+
+ul {
+    list-style-position: inside;
+    margin: 20px auto;
+}
+
+/* ===========================
+   PROFILE IMAGE
+=========================== */
+
+.profile-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    transition: 0.4s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   PROJECTS & SERVICES
+=========================== */
+
+.projects,
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card {
+    background: white;
+    width: 260px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    animation: fadeIn 1s ease-in;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+/* ===========================
+   CONTACT PAGE
+=========================== */
+
 .page-title {
     margin: 40px 20px;
 }
@@ -133,24 +190,28 @@ nav li {
 .contact-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
-    padding: 30px;
+    margin: 30px;
 }
 
 .contact-info,
 .contact-form {
-    background: #f4f4f4;
+    background: white;
+    width: 350px;
     padding: 20px;
     border-radius: 10px;
-    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .contact-info h3,
 .contact-form h3 {
-    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
 }
 
 .contact-form input,
@@ -160,28 +221,46 @@ nav li {
     margin: 8px 0 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 .contact-form button {
     width: 100%;
-    padding: 12px;
-    background: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.contact-form button:hover {
-    background: #555;
-    transform: scale(1.03);
+#errorMessage {
+    font-weight: bold;
+    margin-bottom: 15px;
 }
-/*footer*/
+
+/* ===========================
+   FOOTER
+=========================== */
+
 footer {
     background: #333;
     color: white;
     padding: 15px;
     margin-top: 40px;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.welcome {
+    animation: fadeIn 2s ease-in-out;
 }

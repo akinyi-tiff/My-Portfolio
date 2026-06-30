@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Java Programming",
+        "description": "Object-Oriented Programming concepts and Java applications.",
+        "image": "images/java.jpg"
+    },
+
+    {
+        "title": "Database Design",
+        "description": "Database tables, SQL queries and relationships.",
+        "image": "images/database.jpg"
+    },
+
+    {
+        "title": "Portfolio Website",
+        "description": "Personal portfolio developed using HTML, CSS and JavaScript.",
+        "image": "images/tech.jpg"
+    }
+]
